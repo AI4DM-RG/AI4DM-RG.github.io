@@ -13,7 +13,7 @@ const people = [
   {
     "name": "Manar Hamed",
     "description": "Manar is a PhD student at Concordia University supervised by Yassine Yaakoubi.",
-    "image": "https://mila.quebec/sites/default/themes/mila_v1/assets/images/member/no-picture-v3.jpg",
+    "image": "https://optai-rg.github.io/Manar.jpg",
   },
   {
     "name": "Diaa Azzam",
