@@ -11,14 +11,14 @@ const people = [
     "image": "https://omid-reza.github.io/images/profile.jpg",
   },
   {
-    "name": "Manar Hamed",
-    "description": "Manar is a PhD student at Concordia University supervised by Yassine Yaakoubi.",
-    "image": "https://optai-rg.github.io/Manar.jpg",
-  },
-  {
     "name": "Diaa Azzam",
     "description": "Diaa is a PhD student at Concordia University supervised by Yassine Yaakoubi.",
     "image": "https://optai-rg.github.io/Diaa.jpg",
+  },
+  {
+    "name": "Manar Hamed",
+    "description": "Manar is a PhD student at Concordia University supervised by Yassine Yaakoubi.",
+    "image": "https://optai-rg.github.io/Manar.jpg",
   },
   {
     "name": "Mahmoud Khaled Abdelkader",
