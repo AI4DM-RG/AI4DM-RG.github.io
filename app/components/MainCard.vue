@@ -49,7 +49,7 @@ const items = itemsData.map((item, index) => {
 
 <template>
   <UPageCard
-      title="Optimal-AI Decision Systems Reading Group"
+      title="AI4Decision Making Reading Group"
       description="A collaborative forum dedicated to exploring the intersection of probabilistic modeling, optimization, and modern machine learning. We dive deep into peer-reviewed research and emerging trends in AI for Decision Making, bridging the gap between theoretical game theory and practical autonomous systems."
       orientation="horizontal"
       highlight
