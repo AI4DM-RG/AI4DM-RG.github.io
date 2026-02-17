@@ -13,12 +13,12 @@ const people = [
   {
     "name": "Diaa Azzam",
     "description": "Diaa is a PhD student at Concordia University supervised by Yassine Yaakoubi.",
-    "image": "https://optai-rg.github.io/Diaa.jpg",
+    "image": "https://ai4dm-rg.github.io/Diaa.jpg",
   },
   {
     "name": "Manar Hamed",
     "description": "Manar is a PhD student at Concordia University supervised by Yassine Yaakoubi.",
-    "image": "https://optai-rg.github.io/Manar.jpg",
+    "image": "https://ai4dm-rg.github.io/Manar.jpg",
   },
   {
     "name": "Mahmoud Khaled Abdelkader",
