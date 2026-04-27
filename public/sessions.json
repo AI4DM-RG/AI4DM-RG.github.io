@@ -1,16 +1,16 @@
 [
   {
     "title": "TBD",
-    "description": "TBD",
+    "description": "Dissecting the Impact of Model Misspecification in Data-driven Optimization",
     "speakersbio": "TBD",
-    "speakers": ["TBD"],
+    "speakers": ["Prof. Adam N. Elmachtoub", "Haixiang Lan"],
     "type": "paper",
     "session": {
-      "date": "2025-03-05",
+      "date": "2025-05-14",
       "startTime": "10:00 AM",
       "timezone": "EDT"
     },
-    "tags": ["Machine Learning", "LLM", "RAG", "Reinforcement Learning"],
+    "tags": ["Research Operation", "Machine Learning"],
     "place": "Online",
     "recording_link": "TBD",
     "join_link": "TBD"
