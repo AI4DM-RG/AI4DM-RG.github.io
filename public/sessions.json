@@ -1,8 +1,8 @@
 [
   {
-    "title": "TBD",
-    "description": "Dissecting the Impact of Model Misspecification in Data-driven Optimization",
-    "speakersbio": "TBD",
+    "title": "Dissecting the Impact of Model Misspecification in Data-driven Optimization",
+    "description": "Data-driven optimization promises better decisions by learning from data, but real-world models are rarely a perfect fit for reality. This talk dissects how model misspecification — the gap between the assumed model and the true underlying system — affects the quality of decisions in data-driven optimization. Drawing on recent work, the speakers examine the bias-variance tradeoff that emerges under local misspecification and discuss its implications for practitioners building learning-based decision systems in areas such as supply chain, pricing, and revenue management.",
+    "speakersbio": "Prof. N. Elmachtoub is an Associate Professor of Industrial Engineering and Operations Research at Columbia University, where he is also a member of the Data Science Institute. His research sits at the intersection of machine learning and operations research, with applications in retail, logistics, pricing, and supply chain management. He received his B.S. from Cornell and Ph.D. from MIT, both in operations research, and his recognitions include an NSF CAREER Award, an IBM Faculty Award, and a place on the Forbes 30 Under 30 in Science list. He is joined by his student Haixiang Lan, a PhD candidate in the same department at Columbia, whose research focuses on data-driven optimization, online learning, and revenue management.",
     "speakers": ["Prof. Adam N. Elmachtoub", "Haixiang Lan"],
     "type": "paper",
     "session": {
@@ -14,7 +14,7 @@
     "place": "Online",
     "recording_link": "TBD",
     "join_link": "TBD"
-  },
+  }
   {
     "title": "TBD",
     "description": "TBD",
