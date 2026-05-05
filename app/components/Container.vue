@@ -9,15 +9,10 @@
 
 <style lang="postcss" scoped>
 .rmterp {
-  @apply relative flex h-dvh items-center justify-center;
-}
-
-.fzypcq {
-  @apply z-10 mx-auto flex w-2.5 max-w-sm flex-col items-center justify-center gap-4 p-5;
+  @apply relative flex min-h-dvh flex-col items-stretch justify-start;
 }
 
 .iPbnzK {
-  @apply absolute h-dvh w-full bg-cover bg-center blur transition-opacity duration-300;
-  //background-image: url('/bg/bg1.jpg');
+  @apply fixed inset-0 h-dvh w-full bg-cover bg-center blur transition-opacity duration-300 -z-10;
 }
 </style>

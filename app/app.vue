@@ -8,7 +8,7 @@ useSeoMeta({
   description: '',
   ogTitle: 'AI4DMRG',
   ogDescription: '',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  viewport: 'width=device-width, initial-scale=1',
   twitterCard: 'summary_large_image',
   ogImage: '/social-card.png',
   twitterImage: '/social-card.png',

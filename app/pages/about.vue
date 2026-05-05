@@ -5,11 +5,6 @@ const people = [
     "description": "Yassine is an Assistant Professor at the Gina Cody School of Engineering and Computer Science at Concordia University leading a research group in AI for Decision Making (AI4DM). His research interests lie at the intersection of optimization, learning, and simulation techniques for large-scale, real-world decision-making.",
     "image": "https://yaakoubi.github.io/images/Avatar.jpg",
   },
-  // {
-  //   "name": "Paul Grigas",
-  //   "description": "Paul is an Associate Professor of Industrial Engineering and Operations Research (IEOR) at the University of California, Berkeley. His research interests lie at the intersection of optimization, machine learning, and data-driven decision making, with applications in online advertising and beyond. He is affiliated with the NSF AI Research Institute for Advances in Optimization (AI4OPT).",
-  //   "image": "https://grigas.ieor.berkeley.edu/assets/img/Paul_grigas.jpg"
-  // },
   {
     "name": "Omid Reza Heidari",
     "description": "Omid Reza is a PhD student at Concordia University supervised by Yassine Yaakoubi. His area of interest includes Multimodal Vision-Language, Large Language Models, Multimodal AI Agents, and Reinforcement Learning.",
@@ -35,7 +30,8 @@ const people = [
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-4">
     <UPageCard v-for="person in people" :key="person.name" :title="person.name" :description="person.description" orientation="vertical"  reverse >
-      <img :src="person.image" :alt="'Image of ' + person.name" class="w-full h-100 object-cover object-top rounded-sm" />
+      <img :src="person.image" :alt="'Image of ' + person.name"
+           class="w-full h-64 sm:h-80 md:h-100 object-cover object-top rounded-sm" />
     </UPageCard>
   </div>
 </template>

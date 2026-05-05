@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+
 const itemsData = [
   // Category: Decision Science (success)
   { title: "Decision Making", color: "success" },
@@ -22,29 +24,62 @@ const itemsData = [
   // Category: Alignment (info)
   { title: "Safety", color: "info" }
 ];
-const grid = [];
-const rows = 3;
-const cols = 4;
-for (let r = 0; r < rows; r++) {
-  for (let c = 0; c < cols; c++) {
-    grid.push({ r, c });
+
+// Responsive grid: fewer columns on mobile so badges don't overflow.
+const isMobile = ref(false);
+const items = ref<any[]>([]);
+
+function buildItems() {
+  const cols = isMobile.value ? 2 : 4;
+  const rows = Math.ceil(itemsData.length / cols);
+
+  const grid: { r: number; c: number }[] = [];
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      grid.push({ r, c });
+    }
   }
+
+  const shuffledGrid = grid.sort(() => Math.random() - 0.5);
+
+  // Slightly reduce jitter on mobile to keep badges inside the card.
+  const jitter = isMobile.value ? 2 : 5;
+  const moveRange = isMobile.value ? 10 : 20;
+
+  items.value = itemsData.map((item, index) => {
+    const slot = shuffledGrid[index];
+    const left = (slot.c * (100 / cols)) + (Math.random() * jitter);
+    const top = (slot.r * (100 / rows)) + (Math.random() * jitter);
+    return {
+      ...item,
+      left,
+      top,
+      x: Math.random() * moveRange - moveRange / 2,
+      y: Math.random() * moveRange - moveRange / 2,
+      duration: 2 + Math.random() * 3
+    };
+  });
 }
 
-const shuffledGrid = grid.sort(() => Math.random() - 0.5);
-const items = itemsData.map((item, index) => {
-  const slot = shuffledGrid[index];
-  const left = (slot.c * (100 / cols)) + (Math.random() * 5);
-  const top = (slot.r * (100 / rows)) + (Math.random() * 5);
-  return {
-    ...item,
-    left,
-    top,
-    x: Math.random() * 20 - 10,
-    y: Math.random() * 20 - 10,
-    duration: 2 + Math.random() * 3
-  };
+let mq: MediaQueryList | null = null;
+const handleChange = (e: MediaQueryListEvent) => {
+  isMobile.value = e.matches;
+  buildItems();
+};
+
+onMounted(() => {
+  mq = window.matchMedia('(max-width: 640px)');
+  isMobile.value = mq.matches;
+  buildItems();
+  mq.addEventListener('change', handleChange);
 });
+
+onBeforeUnmount(() => {
+  mq?.removeEventListener('change', handleChange);
+});
+
+// Build once for SSR with desktop defaults so markup is valid before mount.
+buildItems();
 </script>
 
 <template>
@@ -56,7 +91,7 @@ const items = itemsData.map((item, index) => {
       highlight-color="neutral"
       class="main-card"
   >
-    <div class="right-card relative w-full h-50 rounded-md overflow-visible">
+    <div class="right-card relative w-full h-64 sm:h-50 rounded-md overflow-hidden">
       <div
           v-for="(item, index) in items"
           :key="index"
@@ -69,7 +104,7 @@ const items = itemsData.map((item, index) => {
           '--duration': `${item.duration}s`
         }"
       >
-        <UBadge size="md" :color="item.color" variant="subtle" class="pointer-events-none select-none">
+        <UBadge size="md" :color="item.color" variant="subtle" class="pointer-events-none select-none whitespace-nowrap">
           {{ item.title }}
         </UBadge>
       </div>

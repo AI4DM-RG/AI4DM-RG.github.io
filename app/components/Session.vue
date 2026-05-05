@@ -33,18 +33,18 @@ const session_type_color = computed(() => TYPE_MAP[props.type] || 'neutral');
         spotlight
         :spotlight-color="session_type_color"
     >
-      <div class="flex flex-col gap-5">
-        <div class="flex justify-end">
-          <div class="text-xl font-medium">
-            <div class="flex justify-between gap-1">
-              <span class="text-gray-300">  {{ props.session_time.date }} </span>
+      <div class="flex flex-col gap-3 sm:gap-5">
+        <div class="flex justify-start sm:justify-end">
+          <div class="text-base sm:text-xl font-medium w-full sm:w-auto">
+            <div class="flex flex-wrap justify-start sm:justify-between gap-x-2 gap-y-1">
+              <span class="text-gray-300">{{ props.session_time.date }}</span>
               <span class="text-gray-300">{{ props.session_time.startTime }}</span>
               <span class="text-sm text-gray-600">{{ props.session_time.timezone }}</span>
             </div>
           </div>
         </div>
-        <div class="flex justify-end gap-2">
-          <Tag v-for="tag in props.tags" size="md" :tag="tag" />
+        <div class="flex flex-wrap justify-start sm:justify-end gap-2">
+          <Tag v-for="tag in props.tags" :key="tag" size="md" :tag="tag" />
         </div>
       </div>
     </UPageCard>
