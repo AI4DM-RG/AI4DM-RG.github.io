@@ -32,7 +32,7 @@ const people = [
     <UPageCard v-for="person in people" :key="person.name" :title="person.name" :description="person.description" orientation="vertical" reverse>
       <div class="flex justify-center w-full">
         <img :src="person.image" :alt="'Image of ' + person.name"
-             class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 object-cover object-top rounded-full" />
+             class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 object-cover object-top rounded-lg" />
       </div>
     </UPageCard>
   </div>
