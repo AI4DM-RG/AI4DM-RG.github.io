@@ -28,10 +28,12 @@ const people = [
 ]
 </script>
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-4">
-    <UPageCard v-for="person in people" :key="person.name" :title="person.name" :description="person.description" orientation="vertical"  reverse >
-      <img :src="person.image" :alt="'Image of ' + person.name"
-           class="w-full h-64 sm:h-80 md:h-100 object-cover object-top rounded-sm" />
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10 p-4">
+    <UPageCard v-for="person in people" :key="person.name" :title="person.name" :description="person.description" orientation="vertical" reverse>
+      <div class="flex justify-center w-full">
+        <img :src="person.image" :alt="'Image of ' + person.name"
+             class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 object-cover object-top rounded-full" />
+      </div>
     </UPageCard>
   </div>
 </template>
