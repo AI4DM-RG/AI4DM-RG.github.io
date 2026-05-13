@@ -52,9 +52,9 @@ const organizers = team.slice(1);
 
 useSeoMeta({
   title: 'About',
-  description: 'Meet the AI4DM-RG organizing team at Concordia University.',
+  description: 'Meet the AI4DM-RG organizing team.',
   ogTitle: 'About AI4DM-RG',
-  ogDescription: 'Meet the AI4DM-RG organizing team at Concordia University.',
+  ogDescription: 'Meet the AI4DM-RG organizing team.',
   ogUrl: 'https://ai4dm-rg.github.io/about',
   ogImage: 'https://ai4dm-rg.github.io/social-card.png',
   twitterCard: 'summary_large_image',
@@ -67,7 +67,7 @@ useSeoMeta({
     <section class="max-w-5xl">
       <h1 class="text-3xl font-semibold tracking-tight text-highlighted">About AI4DM-RG</h1>
       <p class="mt-3 max-w-3xl text-neutral-400">
-        AI4DM-RG is Concordia University's reading group on AI for decision-making. We bring together students, faculty, and external researchers to discuss recent work across machine learning, optimization, operations research, probabilistic modeling, and robust decision systems.
+        AI4DM-RG is a reading group on AI for decision-making. We bring together students, faculty, and external researchers to discuss recent work across machine learning, optimization, operations research, probabilistic modeling, and robust decision systems.
       </p>
       <div class="mt-4 flex flex-wrap gap-2">
         <UBadge color="neutral" variant="subtle">Machine Learning</UBadge>

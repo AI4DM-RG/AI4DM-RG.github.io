@@ -1,4 +1,5 @@
-export const formatSpeakers = (speakers: string[]) => {
+export const formatSpeakers = (speakers: string[], affiliation?: string | null) => {
     const label = speakers.length > 1 ? 'Speakers' : 'Speaker';
-    return `${label}: ${speakers.join(', ')}`;
+    const names = speakers.join(', ');
+    return affiliation ? `${label}: ${names} (${affiliation})` : `${label}: ${names}`;
 }

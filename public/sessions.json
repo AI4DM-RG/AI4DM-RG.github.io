@@ -4,6 +4,7 @@
     "description": "Data-driven optimization aims to translate machine learning predictions into decisions, but the right way to do so depends on whether the model is correctly specified. This talk dissects when the standard two-stage estimate-then-optimize approach outperforms integrated estimation-optimization, and when it does not, drawing the line in terms of how misspecified the predictor is. The speakers also connect to related work on the bias-variance tradeoff under local misspecification, with implications for learning-based decision systems in pricing, retail, and revenue management.",
     "speakersbio": "Prof. Adam N. Elmachtoub is an Associate Professor of Industrial Engineering and Operations Research at Columbia University, where he is also a member of the Data Science Institute and DAPLab. His research sits at the intersection of machine learning and operations research, with applications in retail, logistics, pricing, and supply chain management. He received his B.S. from Cornell and Ph.D. from MIT, both in operations research. He is joined by Haixiang Lan, a PhD student in Columbia IEOR co-advised by Adam Elmachtoub and Henry Lam, whose research focuses on data-driven decision-making under uncertainty, uncertainty quantification, and robust optimization.",
     "speakers": ["Prof. Adam N. Elmachtoub", "Haixiang Lan"],
+    "speaker_affiliation": "Columbia University",
     "type": "paper",
     "session": {
       "date": "2026-05-14",
@@ -21,6 +22,7 @@
     "description": "Many applications require repeatedly solving a family of optimization problems as parameters vary, which can be computationally prohibitive in real time. This motivates optimization proxies: learned mappings from problem parameters to approximate solutions that can be evaluated rapidly. Optimization proxies are learned by parameterizing the solution map within a function class and training via a single data-driven stochastic optimization problem, an approach that has seen strong empirical success across domains. The seminar discusses the interplay between architecture design, training distributions, training algorithms, and robustness guarantees.",
     "speakersbio": "Paul Grigas is an Associate Professor of Industrial Engineering and Operations Research at UC Berkeley. His research centers on optimization, machine learning, and data-driven decision making, with emphasis on contextual stochastic optimization. He earned his B.S. in Operations Research and Information Engineering from Cornell University in 2011 and his Ph.D. in Operations Research from MIT in 2016, and is a recipient of the NSF CRII Award.",
     "speakers": ["[IVADO] Paul Grigas"],
+    "speaker_affiliation": "UC Berkeley",
     "type": "academic",
     "session": {
       "date": "2026-04-30",

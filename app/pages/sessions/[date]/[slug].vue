@@ -83,7 +83,7 @@ useHead(() => ({
       </template>
       <div class="right-card relative w-full h-full rounded-md overflow-visible pe-4 ps-4">
         <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-          <div>{{ formatSpeakers(currentEvent.speakers) }}</div>
+          <div>{{ formatSpeakers(currentEvent.speakers, currentEvent.speaker_affiliation) }}</div>
           <UButton color="neutral" variant="soft" size="xs" @click="speakerBioExpanded = !speakerBioExpanded" :icon="speakerBioExpanded ? 'i-lucide-arrow-up' : 'i-lucide-arrow-down'">
             {{ speakerBioExpanded ? 'Hide Bio' : 'View Bio' }}
           </UButton>

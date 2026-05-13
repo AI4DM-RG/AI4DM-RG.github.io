@@ -9,6 +9,7 @@ export interface EventItem {
   description: string;
   speakersbio: string;
   speakers: string[];
+  speaker_affiliation?: string | null;
   type: string;
   session: SessionTime;
   tags: string[];

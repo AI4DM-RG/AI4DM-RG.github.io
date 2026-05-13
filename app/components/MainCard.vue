@@ -74,7 +74,7 @@ buildItems();
 <template>
   <UPageCard
       title="AI4DM Reading Group"
-      description="AI for Decision Making (AI4DM) is a Concordia reading group dedicated to advancing the science of choosing actions under uncertainty. We host presentations and discussions of papers and case studies at the intersection of probabilistic modeling, optimization, operations research, and machine learning."
+      description="AI for Decision Making (AI4DM) is a reading group dedicated to advancing the science of choosing actions under uncertainty. We host presentations and discussions of papers and case studies at the intersection of probabilistic modeling, optimization, operations research, and machine learning."
       orientation="horizontal"
       highlight
       highlight-color="neutral"

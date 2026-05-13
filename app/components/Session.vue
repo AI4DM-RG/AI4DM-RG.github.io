@@ -5,6 +5,7 @@ import type { SessionTime } from '~/types/event';
 const props = defineProps<{
   title: string;
   speakers: Array<string>;
+  speaker_affiliation?: string | null;
   type: string;
   session_time: SessionTime;
   tags: string[];
@@ -22,7 +23,7 @@ const session_type_color = computed(() => TYPE_MAP[props.type] || 'neutral');
   <NuxtLink :to="`/sessions/${props.session_time.date}/${useSlug(props.title)}`">
     <UPageCard
         :title="props.title"
-        :description="formatSpeakers(props.speakers)"
+        :description="formatSpeakers(props.speakers, props.speaker_affiliation)"
         orientation="horizontal"
         spotlight
         :spotlight-color="session_type_color"

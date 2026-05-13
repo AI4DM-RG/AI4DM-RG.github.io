@@ -41,6 +41,7 @@ const previousEvent = computed(() => {
         :title="session.title"
         :type="session.type"
         :speakers="session.speakers"
+        :speaker_affiliation="session.speaker_affiliation"
         :session_time="session.session"
         :tags="session.tags"
       />
@@ -54,6 +55,7 @@ const previousEvent = computed(() => {
         :title="session.title"
         :type="session.type"
         :speakers="session.speakers"
+        :speaker_affiliation="session.speaker_affiliation"
         :session_time="session.session"
         :tags="session.tags"
       />
