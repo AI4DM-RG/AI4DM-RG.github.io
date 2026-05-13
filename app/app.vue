@@ -2,6 +2,11 @@
 useHead({
   htmlAttrs: { lang: 'en-CA' },
   titleTemplate: (title) => title ? `${title} - AI4DM-RG` : 'AI4DM-RG - AI for Decision-Making Reading Group',
+  meta: [
+    { 'http-equiv': 'Cache-Control', content: 'no-cache, no-store, must-revalidate' },
+    { 'http-equiv': 'Pragma', content: 'no-cache' },
+    { 'http-equiv': 'Expires', content: '0' },
+  ],
 });
 
 const siteDescription = "AI4DM-RG is a bi-weekly reading group on AI for decision-making, at the intersection of machine learning, operations research, optimization, and probabilistic modeling. Meets every 2nd and 4th Thursday of each month.";
