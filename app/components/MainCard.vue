@@ -6,7 +6,7 @@ const itemsData = [
   { title: "Decision Making", color: "success" },
   { title: "Game Theory", color: "success" },
   { title: "Multi-Agent Systems", color: "success" },
-  { title: "Operation Research", color: "success" },
+  { title: "Operations Research", color: "success" },
 
   // Category: Modern AI (error)
   { title: "AI", color: "error" },
@@ -32,31 +32,20 @@ const items = ref<any[]>([]);
 function buildItems() {
   const cols = isMobile.value ? 2 : 4;
   const rows = Math.ceil(itemsData.length / cols);
-
-  const grid: { r: number; c: number }[] = [];
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      grid.push({ r, c });
-    }
-  }
-
-  const shuffledGrid = grid.sort(() => Math.random() - 0.5);
-
-  // Slightly reduce jitter on mobile to keep badges inside the card.
-  const jitter = isMobile.value ? 2 : 5;
   const moveRange = isMobile.value ? 10 : 20;
 
   items.value = itemsData.map((item, index) => {
-    const slot = shuffledGrid[index];
-    const left = (slot.c * (100 / cols)) + (Math.random() * jitter);
-    const top = (slot.r * (100 / rows)) + (Math.random() * jitter);
+    const row = Math.floor(index / cols);
+    const col = index % cols;
+    const left = (col * (100 / cols)) + (isMobile.value ? 2 : 4);
+    const top = (row * (100 / rows)) + (isMobile.value ? 2 : 4);
     return {
       ...item,
       left,
       top,
-      x: Math.random() * moveRange - moveRange / 2,
-      y: Math.random() * moveRange - moveRange / 2,
-      duration: 2 + Math.random() * 3
+      x: ((index % 3) - 1) * (moveRange / 2),
+      y: ((index % 4) - 1.5) * (moveRange / 3),
+      duration: 2 + (index % 4) * 0.6
     };
   });
 }
@@ -84,14 +73,14 @@ buildItems();
 
 <template>
   <UPageCard
-      title="AI4Decision Making Reading Group"
-      description="AI for Decision Making (AI4DM) is an open, collaborative forum dedicated to advancing the science of choosing actions under uncertainty. We host presentations and discussions of papers and case studies at the intersection of probabilistic modeling, optimization, and machine learning for decision support in single- and multi-agent autonomous settings, with attention to robustness, interpretability, safety, and responsible deployment in real systems."
+      title="AI4DM Reading Group"
+      description="AI for Decision Making (AI4DM) is a Concordia reading group dedicated to advancing the science of choosing actions under uncertainty. We host presentations and discussions of papers and case studies at the intersection of probabilistic modeling, optimization, operations research, and machine learning."
       orientation="horizontal"
       highlight
       highlight-color="neutral"
       class="main-card"
   >
-    <div class="right-card relative w-full h-64 sm:h-50 rounded-md overflow-hidden">
+    <div class="right-card relative w-full h-64 sm:h-56 rounded-md overflow-hidden">
       <div
           v-for="(item, index) in items"
           :key="index"
@@ -111,16 +100,25 @@ buildItems();
     </div>
 
     <div class="informations mt-4">
-      <div>Every week on Thursdays at 10:00 AM EDT</div>
-      <div class="past-recordings text-sm text-gray-500 flex items-center gap-2 flex-wrap">
-        Past recordings could be found on our
-        <UButton icon="i-lucide-youtube" size="md" color="error" variant="ghost">YouTube channel</UButton>
+      <div>Every 2nd and 4th Thursday of each month at 10:00 AM EDT</div>
+      <div class="past-recordings text-sm text-neutral-400 flex items-center gap-2 flex-wrap">
+        Recordings are shared on our YouTube channel when speakers approve.
+        <UButton
+          icon="i-lucide-youtube"
+          size="md"
+          color="error"
+          variant="ghost"
+          disabled
+          aria-label="AI4DM-RG YouTube channel coming soon"
+        >
+          YouTube channel coming soon
+        </UButton>
       </div>
     </div>
   </UPageCard>
 </template>
 
-<style scoped lang="postcss">
+<style scoped>
 .main-card {
   position: relative;
   overflow: hidden; /* Ensures the blur doesn't bleed outside the card corners */
@@ -170,6 +168,12 @@ buildItems();
   }
   to {
     transform: translate(var(--move-x), var(--move-y));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-badge {
+    animation: none;
   }
 }
 </style>

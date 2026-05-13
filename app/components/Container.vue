@@ -1,18 +1,16 @@
 <template>
   <div class="rmterp">
-    <div class="iPbnzK">
-      <slot />
-    </div>
-    <div class="iPbnzK"></div>
+    <slot />
   </div>
 </template>
 
-<style lang="postcss" scoped>
+<style scoped>
 .rmterp {
-  @apply relative flex min-h-dvh flex-col items-stretch justify-start;
-}
-
-.iPbnzK {
-  @apply fixed inset-0 h-dvh w-full bg-cover bg-center blur transition-opacity duration-300 -z-10;
+  position: relative;
+  display: flex;
+  min-height: 100dvh;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
 }
 </style>

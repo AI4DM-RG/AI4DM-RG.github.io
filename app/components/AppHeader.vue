@@ -8,11 +8,16 @@
     </NuxtLink>
     <div class="flex gap-2 justify-end items-center">
       <UButton icon="i-lucide-newspaper" size="md" color="neutral" variant="soft"
-               to="https://forms.gle/Xb9qPZUy3iot4pcVA">
+               to="https://forms.gle/XW927BCmxoyhPTin9"
+               target="_blank"
+               rel="noopener"
+               external
+               aria-label="Subscribe to AI4DM-RG updates">
         <span class="hidden md:inline">Subscribe to our Newsletter</span>
       </UButton>
       <UButton icon="i-lucide-user" size="md" color="neutral" variant="soft"
-               to="/about">
+               to="/about"
+               aria-label="About AI4DM-RG">
         <span class="hidden md:inline">About Us</span>
       </UButton>
     </div>

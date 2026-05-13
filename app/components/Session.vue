@@ -1,12 +1,6 @@
 <script setup lang="ts">
 import Tag from "~/components/Tag.vue";
-
-export interface SessionTime {
-  id: string | number;
-  date: string;
-  startTime: string;
-  timezone: string;
-}
+import type { SessionTime } from '~/types/event';
 
 const props = defineProps<{
   title: string;
@@ -37,9 +31,9 @@ const session_type_color = computed(() => TYPE_MAP[props.type] || 'neutral');
         <div class="flex justify-start sm:justify-end">
           <div class="text-base sm:text-xl font-medium w-full sm:w-auto">
             <div class="flex flex-wrap justify-start sm:justify-between gap-x-2 gap-y-1">
-              <span class="text-gray-300">{{ props.session_time.date }}</span>
-              <span class="text-gray-300">{{ props.session_time.startTime }}</span>
-              <span class="text-sm text-gray-600">{{ props.session_time.timezone }}</span>
+              <span class="text-neutral-300">{{ props.session_time.date }}</span>
+              <span class="text-neutral-300">{{ props.session_time.startTime }}</span>
+              <span class="text-sm text-neutral-400">{{ props.session_time.timezone }}</span>
             </div>
           </div>
         </div>

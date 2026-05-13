@@ -1,2 +1,3 @@
 User-Agent: *
 Disallow:
+Sitemap: https://ai4dm-rg.github.io/sitemap.xml

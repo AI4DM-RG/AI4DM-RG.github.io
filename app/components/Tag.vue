@@ -6,7 +6,10 @@ const props = defineProps<{
 const TAG_COLORS: Record<string, string> = {
   'Machine Learning': 'warning',
   'LLM': 'error',
-  'Research Operation': 'success',
+  'Operations Research': 'success',
+  'Optimization': 'success',
+  'IVADO': 'primary',
+  'Cross-listed Seminar': 'info',
   'AI': 'primary',
   'Artificial intelligence': 'primary',
   'Safety': 'info',

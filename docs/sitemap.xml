@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ai4dm-rg.github.io/</loc>
+  </url>
+  <url>
+    <loc>https://ai4dm-rg.github.io/about</loc>
+  </url>
+  <url>
+    <loc>https://ai4dm-rg.github.io/sessions/2026-05-14/dissecting-the-impact-of-model-misspecification-in-data-driven-optimization</loc>
+  </url>
+  <url>
+    <loc>https://ai4dm-rg.github.io/sessions/2026-04-30/learning-optimization-proxies-fast-convergence-and-robustness-guarantees</loc>
+  </url>
+</urlset>
